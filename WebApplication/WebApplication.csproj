@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -175,13 +176,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802051949589_initialModel.cs" />
-    <Compile Include="Migrations\201802051949589_initialModel.Designer.cs">
-      <DependentUpon>201802051949589_initialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201802112127510_InitialModel.cs" />
+    <Compile Include="Migrations\201802112127510_InitialModel.Designer.cs">
+      <DependentUpon>201802112127510_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802112156033_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201802112156033_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201802112156033_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802112203422_AddMembershipType.cs" />
+    <Compile Include="Migrations\201802112203422_AddMembershipType.Designer.cs">
+      <DependentUpon>201802112203422_AddMembershipType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="ViewModels\RandomCustomerViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -211,7 +221,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -262,8 +274,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802051949589_initialModel.resx">
-      <DependentUpon>201802051949589_initialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802112127510_InitialModel.resx">
+      <DependentUpon>201802112127510_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802112156033_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201802112156033_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802112203422_AddMembershipType.resx">
+      <DependentUpon>201802112203422_AddMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
